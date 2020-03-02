@@ -1,0 +1,197 @@
+/* -------------------- Overall -------------------------  */
+   *{ 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    cursor: url('img/cursor_30x30.svg'), auto;	
+    font-size: 2vw;
+}
+
+
+
+.navbar {
+	height: 15vh;
+	overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+	/*background: rgb(255,255,255);
+	background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 100%); */
+	z-index: 1;
+}
+
+.navbar a {
+  display: block;
+  color: #000;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.8em;
+}
+
+@media screen and (min-width: 1000px) {
+  .navbar a {
+  font-size: 1.3em;
+  }
+}
+
+
+.logo
+{
+  float: left;
+  text-align: left;
+  width: 45vw;
+}
+
+.links
+{
+  float: left;
+  text-align: right;
+  width: 55vw;
+}
+
+
+  .wrapper { 
+  height:100%;
+}
+
+  .hero { 
+   position: relative;
+   margin-bottom: 4vw;
+   width: 100%;
+}
+
+  .video { 
+   max-width: 100%;
+}
+
+
+.hero a {
+  color: #FFFFFF;
+  font-family: 'Space Mono', monospace;
+  font-size: 3em;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.text {
+      width:92vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+p {
+  color: #000;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media screen and (min-width: 1000px) {
+  p {
+  font-size: 1em;
+  }
+}
+
+body:after {
+  display: none;
+  content: "bp-small"
+}
+
+video {
+  max-width: 100%;
+}
+
+@media (min-width: 700px) {
+   body:after {
+    content: "bp-medium"
+  }
+}
+
+@media (min-width: 1300px) {
+   body:after {
+    content: "bp-large"
+  }
+}
+
+/* -------------------- Startpage -------------------------  */
+
+  .case { 
+  	width: 92vw;
+  	margin: 0 auto;
+  	padding-top: 4vw;
+  	padding-bottom: 4vw;
+}
+
+  .case img{ 
+  	cursor: url('img/cursor_hover_100x100.svg'), auto;	
+}
+
+/*.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}*/
+
+
+/* -------------------- Case page -------------------------  */
+
+
+
+.full {
+  float: left;
+  width:96vw;
+  padding: 2vw;
+}
+
+.square {
+  float: left;
+  width:46vw;
+  padding: 2vw;
+}
+
+.oneonethreetwo {
+  float: left;
+  width:36.8vw;
+  padding: 2vw;
+}
+
+.threetwooneone {
+  float: left;
+  width:55.2vw;
+  padding: 2vw;
+}
+
+.threetwothreetwo {
+  float: left;
+  width:96vw;
+  padding: 2vw;
+}
+
+@media (min-width: 600px) {
+  .threetwothreetwo {
+  float: left;
+  width:46vw;
+  padding: 2vw;
+  }
+}
+
+.nopadding { 
+padding-right: 0vw;
+padding-left: 0vw;
+width: 100vw;
+}
+
+
