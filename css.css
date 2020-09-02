@@ -121,7 +121,7 @@ video {
   max-width: 100%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 700px) {
    body:after {
     content: "bp-medium"
   }
