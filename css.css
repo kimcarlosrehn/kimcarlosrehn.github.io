@@ -3,7 +3,7 @@
     margin: 0; 
     padding: 0; 
     border: 0; 
-    cursor: url('img/cursor_30x30.svg'), auto;	
+    cursor: url('img/cursor_black_30x30.svg'), auto;	
     font-size: 2vw;
 }
 
@@ -26,7 +26,8 @@
   padding: 20px 20px;
   text-decoration: none;
   font-family: 'Space Mono', monospace;
-  font-size: 1.8em;
+  font-size: 1.7em;
+
 }
 
 @media screen and (min-width: 1000px) {
@@ -40,14 +41,19 @@
 {
   float: left;
   text-align: left;
-  width: 45vw;
+  width: 45%;
+  animation: fadeInLeft;
+  animation-duration: 2s;
+
 }
 
 .links
 {
   float: left;
   text-align: right;
-  width: 55vw;
+  width: 55%;
+  animation: fadeInRight;
+  animation-duration: 2s;
 }
 
 
@@ -59,6 +65,8 @@
    position: relative;
    margin-bottom: 4vw;
    width: 100%;
+     animation: fadeIn;
+  animation-duration: 3s;
 }
 
   .video { 
@@ -85,7 +93,7 @@ img {
   padding-right: 4vw;
   padding-top: 2vw;
   padding-bottom: 2vw;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
 
 }
@@ -93,7 +101,7 @@ img {
 p {
   color: #000;
   font-family: 'Space Mono', monospace;
-  font-size: 1.5em;
+  font-size: 1.8em;
   line-height: 1.6;
   text-align: center;
 }
@@ -113,7 +121,7 @@ video {
   max-width: 100%;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
    body:after {
     content: "bp-medium"
   }
@@ -125,17 +133,56 @@ video {
   }
 }
 
+
+/* -------------------- Footetr -------------------------  */
+
+  .footer { 
+  	width: 100%;
+  	margin: 0 auto;
+  	padding-top: 8vw;
+  	padding-bottom: 8vw;
+  	text-align: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .footer {
+  	width: 100%;
+  	float: left;
+  	padding-left: 2%;
+ 	padding-right: 2%;
+ 	padding-bottom: 8vw;
+ 	padding-top: 8vw;
+ 	text-align: center;
+		}
+}
+
 /* -------------------- Startpage -------------------------  */
 
   .case { 
-  	width: 92vw;
+  	width: 92%;
   	margin: 0 auto;
-  	padding-top: 4vw;
-  	padding-bottom: 4vw;
+  	padding-top: 4%;
+  	padding-bottom: 4%;
+    transition: box-shadow 1s;
 }
 
+@media screen and (min-width: 1000px) {
+  .case {
+  	width: 46%;
+  	float: left;
+  	padding-left: 2%;
+ 	padding-right: 2%;
+ 	padding-bottom: 4%;
+ 	padding-top: 0%;
+		}
+}
+   
   .case img{ 
-  	cursor: url('img/cursor_hover_100x100.svg'), auto;	
+  	cursor: url('img/cursor_white_30x30.svg'), auto;	
+}
+
+  .case img:hover{ 
+    box-shadow: 0 0 15px rgba(33,33,33,.2); 
 }
 
 /*.centered {
@@ -146,52 +193,53 @@ video {
 }*/
 
 
+
 /* -------------------- Case page -------------------------  */
 
 
 
 .full {
   float: left;
-  width:96vw;
-  padding: 2vw;
+  width:96%;
+  padding: 2%;
 }
 
 .square {
   float: left;
-  width:46vw;
-  padding: 2vw;
+  width:46%;
+  padding: 2%;
 }
 
 .oneonethreetwo {
   float: left;
-  width:36.8vw;
-  padding: 2vw;
+  width:36.8%;
+  padding: 2%;
 }
 
 .threetwooneone {
   float: left;
-  width:55.2vw;
-  padding: 2vw;
+  width:55.2%;
+  padding: 2%;
 }
 
 .threetwothreetwo {
   float: left;
-  width:96vw;
-  padding: 2vw;
+  width:96%;
+  padding: 2%;
 }
 
 @media (min-width: 600px) {
   .threetwothreetwo {
   float: left;
-  width:46vw;
-  padding: 2vw;
+  width:46%;
+  padding: 2%;
   }
 }
 
 .nopadding { 
-padding-right: 0vw;
-padding-left: 0vw;
-width: 100vw;
+padding-right: 0%;
+padding-left: 0%;
+width: 100%;
 }
 
 
