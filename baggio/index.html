@@ -311,34 +311,55 @@
       </picture>
     </div>
     <script>
-      (function() {
-        const bodyStyles =
-          !!window.getComputedStyle &&
-          window.getComputedStyle(document.body, ":after");
-        if (bodyStyles) {
-          const bp = bodyStyles.content.replace(/['"]+/g, "");
-          const video = document.getElementById("bg-video");
-
-          if (video) {
-            video.pause();
-
-            let sourceSrc = "";
-
-            if (bp === "bp-large") {
-              sourceSrc = video.getAttribute("data-video");
-            } else if (bp === "bp-small") {
-              sourceSrc = video.getAttribute("data-video-small");
+    (function() {
+  const videos = document.querySelectorAll(".bg-video");
+ 
+  if (videos.length > 0) {
+    const bodyStyles =
+      !!window.getComputedStyle &&
+      window.getComputedStyle(document.body, ":after");
+    if (bodyStyles) {
+      const bp = bodyStyles.content.replace(/['"]+/g, "");
+ 
+      videos.forEach(function(video) {
+        if (video) {
+          video.pause();
+ 
+          let sourceSrc = "";
+ 
+          if (bp === "bp-large") {
+            sourceSrc = video.getAttribute("data-video-large");
+          } else if (bp === "bp-small") {
+            sourceSrc = video.getAttribute("data-video-small");
+          }
+ 
+          if (bp === "bp-medium") {
+            sourceSrc = video.getAttribute("data-video-medium");
+          } else if (bp === "bp-small") {
+            sourceSrc = video.getAttribute("data-video-small");
+          }
+ 
+          if (sourceSrc) {
+            let sourceElement;
+            for (let i = 0; i < video.childNodes.length; i++) {
+              if (video.childNodes[i].className === "video-source") {
+                sourceElement = video.childNodes[i];
+                break;
+              }
             }
-
-            if (sourceSrc) {
-              const sourceElement = document.getElementById("video-source");
+            if (sourceElement) {
               sourceElement.src = sourceSrc;
               video.load();
               video.play();
             }
           }
         }
-      })();
+      });
+    }
+  }
+})();
+
     </script>
+
   </body>
 </html>
