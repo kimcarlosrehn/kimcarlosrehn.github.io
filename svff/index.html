@@ -7,7 +7,7 @@
     <meta name="keywords" content="Portfolio, Design, UX, UI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <link rel="stylesheet" type="text/css" href="/css.css" />
+    <link rel="stylesheet" type="text/css" href="../css.css" />
     
     <meta property="og:image" content="https://kimcarlosrehn.github.io/img/og/og_img_1200x630px.jpg"/>
     <meta property="og:image:url"  content="https://kimcarlosrehn.github.io/img/og/og_img_1200x630px.jpg"/>
@@ -34,27 +34,24 @@
 
     <div class="wrapper">
       <div class="hero">
-        <picture>
-          <source
-            media="(max-width: 599px)"
-            srcset="img/svff_1280x1280px.jpg"
-          />
-          <source
-            media="(min-width: 600px) and (max-width: 1299px)"
-            srcset="img/svff_1920x1280px.jpg"
-          />
-          <source
-            media="(min-width: 1300px)"
-            srcset="img/svff_3840x2560px.jpg"
-          />
-          <img
-            src="img/svff_3840x2560px.jpg"
-            alt="SvFF – Svenska Fotbollförbundet"
-          />
-        </picture>
-      </div>
-
-      <div class="text">
+            <video
+              class="bg-video"
+              data-video-small="video/svff_30_1080x1080px.mp4"
+                data-video-medium="video/svff_30_1920x1080px.mp4"
+                data-video-large="video/svff_30_3840x2160px.mp4"
+                playsinline="true"
+                type="video/mp4"
+                autoplay="autoplay"
+                muted="true"
+                loop="loop"
+            >
+              <source
+                class="video-source"
+                src="video/svff_30_1920x1080px.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
         <p>
           Since 2017, I have created and further developed a digital identity and design system for the Swedish Football Association.
         </p>
@@ -80,34 +77,54 @@
       
     </div>
     <script>
-      (function() {
-        const bodyStyles =
-          !!window.getComputedStyle &&
-          window.getComputedStyle(document.body, ":after");
-        if (bodyStyles) {
-          const bp = bodyStyles.content.replace(/['"]+/g, "");
-          const video = document.getElementById("bg-video");
-
-          if (video) {
-            video.pause();
-
-            let sourceSrc = "";
-
-            if (bp === "bp-large") {
-              sourceSrc = video.getAttribute("data-video");
-            } else if (bp === "bp-small") {
-              sourceSrc = video.getAttribute("data-video-small");
+    (function() {
+  const videos = document.querySelectorAll(".bg-video");
+ 
+  if (videos.length > 0) {
+    const bodyStyles =
+      !!window.getComputedStyle &&
+      window.getComputedStyle(document.body, ":after");
+    if (bodyStyles) {
+      const bp = bodyStyles.content.replace(/['"]+/g, "");
+ 
+      videos.forEach(function(video) {
+        if (video) {
+          video.pause();
+ 
+          let sourceSrc = "";
+ 
+          if (bp === "bp-large") {
+            sourceSrc = video.getAttribute("data-video-large");
+          } else if (bp === "bp-small") {
+            sourceSrc = video.getAttribute("data-video-small");
+          }
+ 
+          if (bp === "bp-medium") {
+            sourceSrc = video.getAttribute("data-video-medium");
+          } else if (bp === "bp-small") {
+            sourceSrc = video.getAttribute("data-video-small");
+          }
+ 
+          if (sourceSrc) {
+            let sourceElement;
+            for (let i = 0; i < video.childNodes.length; i++) {
+              if (video.childNodes[i].className === "video-source") {
+                sourceElement = video.childNodes[i];
+                break;
+              }
             }
-
-            if (sourceSrc) {
-              const sourceElement = document.getElementById("video-source");
+            if (sourceElement) {
               sourceElement.src = sourceSrc;
               video.load();
               video.play();
             }
           }
         }
-      })();
+      });
+    }
+  }
+})();
+
     </script>
   </body>
 </html>
