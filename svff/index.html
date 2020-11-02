@@ -34,7 +34,7 @@
 
     <div class="wrapper">
       <div class="hero">
-            <video
+        <video
               class="bg-video"
               data-video-small="video/svff_30_1080x1080px.mp4"
                 data-video-medium="video/svff_30_1920x1080px.mp4"
@@ -44,21 +44,37 @@
                 autoplay="autoplay"
                 muted="true"
                 loop="loop"
-            >
-              <source
-                class="video-source"
-                src="video/svff_30_1920x1080px.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
+         />
+          <source
+            class="video-source"
+            src="video/svff_30_1920x1080px.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <div class="text">
         <p>
-          Since 2017, I have created and further developed a digital identity and design system for the Swedish Football Association.
+          New digital identity and design system for the Swedish Football Association.
         </p>
         <p>
-          Concepts for several websites have been developed and svenskfotboll.se has grown into a multi-site platform. During that time, my role has grown to also include UX and strategy lead.
+          UX and visual design lead in concepts for several websites during the time svenskfotboll.se has grown into a multi-site platform.
         </p>
       </div>
+      <picture class="full">
+        <source
+          media="(max-width: 1299px)"
+          srcset="img/svff_1920x1080px.jpg"
+        />
+        <source
+          media="(min-width: 1300px)"
+          srcset="img/svff_3840x2160px.jpg"
+        />
+        <img
+          src="img/svff_3840x2160px.jpg"
+          alt="SvFF – Match page"
+        />
+      </picture>
+
 
       <picture class="full">
         <source
