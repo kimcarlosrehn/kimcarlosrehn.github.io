@@ -136,7 +136,7 @@ video {
 }
 
 
-/* -------------------- Footetr -------------------------  */
+/* -------------------- Footer -------------------------  */
 
   .footer { 
   	width: 100%;
@@ -244,4 +244,9 @@ padding-left: 0%;
 width: 100%;
 }
 
+.doubletopbottom
+{ 
+  padding-bottom: 4vw;
+  padding-top: 4vw;
+}
 
