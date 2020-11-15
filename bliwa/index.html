@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="description" content="Portfolio of Kim Carlos Rehn. Stockholm, Sweden."/>
+    <meta name="keywords" content="Portfolio, Design, UX, UI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="../css.css" />
+    
+    <meta property="og:image" content="https://kimcarlosrehn.github.io/img/og/og_img_1200x630px.jpg"/>
+    <meta property="og:image:url"  content="https://kimcarlosrehn.github.io/img/og/og_img_1200x630px.jpg"/>
+    <meta property="twitter:image" content="https://kimcarlosrehn.github.io/img/og/og_img_1200x630px.jpg"/>
+
+    <title>Kim Carlos Rehn - Bliwa</title>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:700&display=swap" rel="stylesheet"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <ul class="logo">
+        <a href="/index.html">Kim Carlos Rehn</a>
+      </ul>
+      <ul class="links">
+        <a href="mailto:hej@kimcarlosrehn.se">hej@kimcarlosrehn.se</a>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+      <div class="hero">
+        <video
+              class="bg-video"
+              data-video-small="video/svff_30_1080x1080px.mp4"
+                data-video-medium="video/svff_30_1920x1080px.mp4"
+                data-video-large="video/svff_30_3840x2160px.mp4"
+                playsinline="true"
+                type="video/mp4"
+                autoplay="autoplay"
+                muted="true"
+                loop="loop"
+         />
+          <source
+            class="video-source"
+            src="video/svff_30_1920x1080px.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <div class="text doubletopbottom">
+        <p>
+          Lorem ipsum dolor sit amet
+        </p>
+      </div>
+       <picture class="full nopadding doubletopbottom">
+        <source
+          media="(max-width: 999px)"
+          srcset="img/bliwa_start_1500x1500px.jpg"
+        />
+        <source
+          media="(min-width: 1000px)"
+          srcset="img/bliwa_start_3840x2160px.jpg"
+        />
+        <img
+          src="img/bliwa_start_3840x2160px.jpg"
+          alt="Bliwa – Partner page"
+        />
+      </picture>
+
+      <picture class="full nopadding doubletopbottom">
+        <source
+          media="(max-width: 1299px)"
+          srcset="img/bliwa_partners_1920x1100px.jpg"
+        />
+        <source
+          media="(min-width: 1300px)"
+          srcset="img/bliwa_partners_3840x1500px.jpg"
+        />
+        <img
+          src="img/bliwa_partners_3840x1500px.jpg"
+          alt="Bliwa – Partner page"
+        />
+      </picture>
+
+
+      <picture class="full doubletopbottom">
+        <source
+          media="(max-width: 999px)"
+          srcset="../svff/img/svff_01_2120x1710px.jpg"
+        />
+        <source
+          media="(min-width: 1000px)"
+          srcset="../svff/img/svff_01_3840x920px.jpg"
+        />
+        <img
+          src="../svff/img/svff_01_3840x920px.jpg"
+          alt="SvFF – icons"
+        />
+      </picture>
+      <div class="text doubletopbottom">
+        <p>
+          Lorem ipsum dolor sit amet
+        </p>
+      </div>
+      <video
+        class="bg-video doubletopbottom"
+        data-video-small="video/svff_header-multisite_27_1500x440px.mp4"
+        data-video-medium="video/svff_header-multisite_30_1920x562px.mp4"
+        data-video-large="video/svff_header-multisite_32-5_3375x990px.mp4"
+        playsinline="true"
+        type="video/mp4"
+        autoplay="autoplay"
+        muted="true"
+        loop="loop"
+      >
+      <source
+          class="video-source"
+          src="video/svff_header-multisite_30_1920x562px.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="text doubletopbottom">
+        <p>
+          Lorem ipsum dolor sit amet
+        </p>
+      </div>
+      <picture class="full doubletopbottom">
+        <source
+          media="(max-width: 999px)"
+          srcset="img/svff_figma_1400x1200px.jpg"
+        />
+        <source
+          media="(min-width: 1000px)"
+          srcset="img/svff_figma_2500x450px.jpg"
+        />
+        <img
+          src="img/svff_figma_2500x450px.jpg"
+          alt="SvFF – Match page"
+        />
+      </picture>
+     
+      <div class="footer">
+      </div>
+    </div>
+    <script>
+    (function() {
+  const videos = document.querySelectorAll(".bg-video");
+ 
+  if (videos.length > 0) {
+    const bodyStyles =
+      !!window.getComputedStyle &&
+      window.getComputedStyle(document.body, ":after");
+    if (bodyStyles) {
+      const bp = bodyStyles.content.replace(/['"]+/g, "");
+ 
+      videos.forEach(function(video) {
+        if (video) {
+          video.pause();
+ 
+          let sourceSrc = "";
+ 
+          if (bp === "bp-large") {
+            sourceSrc = video.getAttribute("data-video-large");
+          } else if (bp === "bp-small") {
+            sourceSrc = video.getAttribute("data-video-small");
+          }
+ 
+          if (bp === "bp-medium") {
+            sourceSrc = video.getAttribute("data-video-medium");
+          } else if (bp === "bp-small") {
+            sourceSrc = video.getAttribute("data-video-small");
+          }
+ 
+          if (sourceSrc) {
+            let sourceElement;
+            for (let i = 0; i < video.childNodes.length; i++) {
+              if (video.childNodes[i].className === "video-source") {
+                sourceElement = video.childNodes[i];
+                break;
+              }
+            }
+            if (sourceElement) {
+              sourceElement.src = sourceSrc;
+              video.load();
+              video.play();
+            }
+          }
+        }
+      });
+    }
+  }
+})();
+
+    </script>
+  </body>
+</html>
