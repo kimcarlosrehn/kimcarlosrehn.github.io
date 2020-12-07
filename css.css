@@ -1,5 +1,5 @@
-/* -------------------- Overall -------------------------  */
-   *{ 
+/* -------------------- All -------------------------  */
+* { 
     margin: 0; 
     padding: 0; 
     border: 0; 
@@ -8,6 +8,7 @@
 }
 
 
+/* -------------------- Navbar -------------------------  */
 
 .navbar {
 	height: 15vh;
@@ -27,7 +28,6 @@
   text-decoration: none;
   font-family: 'Space Mono', monospace;
   font-size: 1.7em;
-
 }
 
 @media screen and (min-width: 1000px) {
@@ -36,19 +36,15 @@
   }
 }
 
-
-.logo
-{
+.logo {
   float: left;
   text-align: left;
   width: 45%;
   animation: fadeInLeft;
   animation-duration: 2s;
-
 }
 
-.links
-{
+.links {
   float: left;
   text-align: right;
   width: 55%;
@@ -56,20 +52,21 @@
   animation-duration: 2s;
 }
 
+/* -------------------- Overall -------------------------  */
 
-  .wrapper { 
+.wrapper { 
   height:100%;
 }
 
-  .hero { 
-   position: relative;
-   margin-bottom: 4vw;
-   width: 100%;
-     animation: fadeIn;
+.hero { 
+  position: relative;
+  margin-bottom: 4vw;
+  width: 100%;
+  animation: fadeIn;
   animation-duration: 3s;
 }
 
-  .video { 
+.video { 
    max-width: 100%;
 }
 
@@ -81,21 +78,21 @@
 }
 
 img {
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0 auto;
-    display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  display: block;
 }
 
 .text {
-      width:92vw;
+  width:92vw;
   padding-left: 4vw;
   padding-right: 4vw;
   padding-top: 2vw;
   padding-bottom: 2vw;
   max-width: 1600px;
   margin: 0 auto;
-
+  overflow: hidden;
 }
 
 p {
@@ -135,35 +132,14 @@ video {
   }
 }
 
-
-/* -------------------- Footer -------------------------  */
-
-  .footer { 
-  	width: 100%;
-  	margin: 0 auto;
-  	padding-top: 8vw;
-  	padding-bottom: 8vw;
-  	text-align: center;
-}
-
-@media screen and (min-width: 1000px) {
-  .footer {
-  	width: 100%;
-  	float: left;
- 	padding-bottom: 8vw;
- 	padding-top: 8vw;
- 	text-align: center;
-		}
-}
-
 /* -------------------- Startpage -------------------------  */
 
-  .case { 
-  	width: 92%;
-  	margin: 0 auto;
-  	padding-top: 4%;
-  	padding-bottom: 4%;
-    transition: box-shadow 1s;
+.case { 
+	width: 92%;
+	margin: 0 auto;
+	padding-top: 4%;
+	padding-bottom: 4%;
+  transition: box-shadow 1s;
 }
 
 @media screen and (min-width: 1000px) {
@@ -171,18 +147,18 @@ video {
   	width: 46%;
   	float: left;
   	padding-left: 2%;
- 	padding-right: 2%;
- 	padding-bottom: 4%;
- 	padding-top: 0%;
-		}
+   	padding-right: 2%;
+   	padding-bottom: 4%;
+   	padding-top: 0%;
+	}
 }
    
-  .case img{ 
-  	cursor: url('img/cursor_white_30x30.svg'), auto;	
+.case img{ 
+  cursor: url('img/cursor_white_30x30.svg'), auto;	
 }
 
-  .case img:hover{ 
-    box-shadow: 0 0 15px rgba(33,33,33,.2); 
+.case img:hover { 
+  box-shadow: 0 0 15px rgba(33,33,33,.2); 
 }
 
 /*.centered {
@@ -230,21 +206,48 @@ video {
 
 @media (min-width: 600px) {
   .threetwothreetwo {
-  float: left;
-  width:46%;
-  padding: 2%;
+    float: left;
+    width:46%;
+    padding: 2%;
   }
 }
 
 .nopadding { 
-padding-right: 0%;
-padding-left: 0%;
-width: 100%;
+  padding-right: 0%;
+  padding-left: 0%;
+  width: 100%;
 }
 
-.doubletopbottom
-{ 
-  padding-bottom: 4vw;
-  padding-top: 4vw;
+.doubletopbottom { 
+  padding-bottom: 8vw;
+  padding-top: 8vw;
+}
+
+@media (min-width: 1000px) {
+  .doubletopbottom {
+    padding-bottom: 6vw;
+    padding-top: 6vw;
+  }
+}
+
+
+/* -------------------- Footer -------------------------  */
+
+.footer { 
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 8vw;
+  padding-bottom: 8vw;
+  text-align: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .footer {
+    width: 100%;
+    float: left;
+    padding-bottom: 8vw;
+    padding-top: 8vw;
+    text-align: center;
+  }
 }
 
