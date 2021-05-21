@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="description" content="Portfolio of Kim Carlos Rehn. Stockholm, Sweden."/>
+    <meta name="keywords" content="Portfolio, Design, UX, UI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="../css.css" />
+    
+    <meta property="og:image" content="https://kimcarlosrehn.github.io/img/og/og_img_1200x630px.jpg"/>
+    <meta property="og:image:url"  content="https://kimcarlosrehn.github.io/img/og/og_img_1200x630px.jpg"/>
+    <meta property="twitter:image" content="https://kimcarlosrehn.github.io/img/og/og_img_1200x630px.jpg"/>
+
+    <title>Kim Carlos Rehn - SBC</title>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:700&display=swap" rel="stylesheet"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <ul class="logo">
+        <a href="/index.html">Kim Carlos Rehn</a>
+      </ul>
+      <ul class="links">
+        <a href="mailto:hej@kimcarlosrehn.se">hej@kimcarlosrehn.se</a>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+      <div class="hero">
+        <video
+              class="bg-video"
+              data-video-small="video/svff_30_1080x1080px.mp4"
+                data-video-medium="video/sbc_30_1920x1080px.mp4"
+                data-video-large="video/sbc_30_3840x2160px.mp4"
+                playsinline="true"
+                type="video/mp4"
+                autoplay="autoplay"
+                muted="true"
+                loop="loop"
+         />
+          <source
+            class="video-source"
+            src="video/sbc_30_1920x1080px.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <div class="text doubletopbottom">
+        <p>
+			This spring I’m in a service design focused project for SBC where we create digital services to make the housing co-op board heroes.
+        </p>
+       
+      </div>
+      
+     
+      <div class="footer">
+      </div>
+    </div>
+    <script>
+    (function() {
+  const videos = document.querySelectorAll(".bg-video");
+ 
+  if (videos.length > 0) {
+    const bodyStyles =
+      !!window.getComputedStyle &&
+      window.getComputedStyle(document.body, ":after");
+    if (bodyStyles) {
+      const bp = bodyStyles.content.replace(/['"]+/g, "");
+ 
+      videos.forEach(function(video) {
+        if (video) {
+          video.pause();
+ 
+          let sourceSrc = "";
+ 
+          if (bp === "bp-large") {
+            sourceSrc = video.getAttribute("data-video-large");
+          } else if (bp === "bp-small") {
+            sourceSrc = video.getAttribute("data-video-small");
+          }
+ 
+          if (bp === "bp-medium") {
+            sourceSrc = video.getAttribute("data-video-medium");
+          } else if (bp === "bp-small") {
+            sourceSrc = video.getAttribute("data-video-small");
+          }
+ 
+          if (sourceSrc) {
+            let sourceElement;
+            for (let i = 0; i < video.childNodes.length; i++) {
+              if (video.childNodes[i].className === "video-source") {
+                sourceElement = video.childNodes[i];
+                break;
+              }
+            }
+            if (sourceElement) {
+              sourceElement.src = sourceSrc;
+              video.load();
+              video.play();
+            }
+          }
+        }
+      });
+    }
+  }
+})();
+
+    </script>
+  </body>
+</html>
