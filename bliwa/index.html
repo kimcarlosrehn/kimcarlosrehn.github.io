@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
 
-    <meta name="description" content="Portfolio of Kim Carlos Rehn. Stockholm, Sweden."/>
+    <meta name="description" content="Portfolio of Kim Carlos. Stockholm, Sweden."/>
     <meta name="keywords" content="Portfolio, Design, UX, UI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -13,7 +13,7 @@
     <meta property="og:image:url"  content="https://kimcarlosrehn.github.io/img/og/og_img_1200x630px.jpg"/>
     <meta property="twitter:image" content="https://kimcarlosrehn.github.io/img/og/og_img_1200x630px.jpg"/>
 
-    <title>Kim Carlos Rehn - Bliwa</title>
+    <title>Kim Carlos - Bliwa</title>
     <link href="https://fonts.googleapis.com/css?family=Space+Mono:700&display=swap" rel="stylesheet"/>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
@@ -25,7 +25,7 @@
   <body>
     <nav class="navbar">
       <ul class="logo">
-        <a href="/index.html">Kim Carlos Rehn</a>
+        <a href="/index.html">Kim Carlos</a>
       </ul>
       <ul class="links">
         <a href="mailto:hej@kimcarlosrehn.se">hej@kimcarlosrehn.se</a>
@@ -33,24 +33,25 @@
     </nav>
 
     <div class="wrapper">
-      <div class="hero">
-        <video
-              class="bg-video"
-              data-video-small="video/svff_30_1080x1080px.mp4"
-                data-video-medium="video/svff_30_1920x1080px.mp4"
-                data-video-large="video/svff_30_3840x2160px.mp4"
-                playsinline="true"
-                type="video/mp4"
-                autoplay="autoplay"
-                muted="true"
-                loop="loop"
-         />
+       <div class="hero">
+        <picture>
           <source
-            class="video-source"
-            src="video/svff_30_1920x1080px.mp4"
-            type="video/mp4"
+            media="(max-width: 599px)"
+            srcset="img/bliwa_start_1500x1500px.jpg"
           />
-        </video>
+          <source
+            media="(min-width: 600px) and (max-width: 1299px)"
+            srcset="img/bliwa_start_1500x1500px.jpg"
+          />
+          <source
+            media="(min-width: 1300px)"
+            srcset="img/bliwa_start_3840x2160px.jpg"
+          />
+          <img
+            src="/img/bliwa_start_3840x2160px.jpg"
+            alt="Bliwa start"
+          />
+        </picture>
       </div>
       <div class="text doubletopbottom">
         <p>
@@ -60,24 +61,50 @@
          I have also been involved in CX/UX for the new "my pages" with services and checkout journeys in focus.
         </p>
       </div>
-       <picture class="full nopadding doubletopbottom">
+
+      
+      <picture class="full nopadding doubletopbottom">
         <source
           media="(max-width: 999px)"
-          srcset="img/bliwa_start_1500x1500px.jpg"
+          srcset="img/bliwa_belopp_1920x500px.jpg"
         />
         <source
           media="(min-width: 1000px)"
-          srcset="img/bliwa_start_3840x2160px.jpg"
+          srcset="img/bliwa_belopp_3840x840px.jpg"
         />
         <img
-          src="img/bliwa_start_3840x2160px.jpg"
+          src="img/bliwa_belopp_1920x500px.jpg"
           alt="Bliwa – The mobile experience"
         />
       </picture>
 
+     
+
       <div class="text doubletopbottom">
         <p>
           The long-term goal is "sweden's smoothest insurance experience". We are far from there yet, but a strong foundation has been laid with a new scalable visual identity and CX approach with the user in focus.
+        </p>
+      </div>
+
+      <picture class="full nopadding doubletopbottom">
+        <source
+          media="(max-width: 1299px)"
+          srcset="img/bliwa_styles-1_1920x1080px.jpg"
+        />
+        <source
+          media="(min-width: 1300px)"
+          srcset="img/bliwa_styles-1_3840x2160px.jpg"
+        />
+        <img
+          src="img/bliwa_styles-1_1920x1080px.jpg"
+          alt="Bliwa – Partner page"
+        />
+      </picture>
+
+     
+      <div class="text doubletopbottom">
+        <p>
+          The mission was initially only to further develop and digitally adapt the existing identity, but during the start of the concept phase we saw the need to think new.  Bliwa wanted a more challenging and playful identity that set Bliwa apart from its competitors.
         </p>
       </div>
 
@@ -95,6 +122,8 @@
           alt="Bliwa – Partner page"
         />
       </picture>
+
+    
 
 
       
